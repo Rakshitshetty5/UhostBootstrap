@@ -1,0 +1,19 @@
+{
+  "name": "hostbootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rakshitshetty5/UhostBootstrap.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rakshitshetty5/UhostBootstrap/issues"
+  },
+  "homepage": "https://github.com/Rakshitshetty5/UhostBootstrap#readme"
+}

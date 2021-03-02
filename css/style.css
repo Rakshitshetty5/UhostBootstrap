@@ -1,0 +1,37 @@
+#showcase{
+    background: url('../img/freedom.jpg');
+    min-height : 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 60px;
+    position: relative;
+}
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    left : 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+}
+.recommended-plan{
+    font-size: 1rem;
+}
+
+.fas{
+    color: white;
+    background: black;
+    padding: 5px;
+    border-radius: 5px ;
+}
+.card-styles:hover{
+    background-color: black;
+    color: white;
+}
+
+.customer-header{
+    border-bottom: 1px solid whitesmoke;
+}
