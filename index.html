@@ -13,9 +13,9 @@
   <title>HostIt</title>
 </head>
 
-<body id="home">
+<body  data-spy="scroll" data-target="#main-nav" id="home">
 
-  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3">
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3" id="main-nav">
     <a href="#home" class="navbar-brand ml-2">
         <img src="img/logo.png" alt="H" width="50" height="50">
         <h3 class="d-inline align-middle">UHost</h3>
@@ -36,7 +36,7 @@
             <a href="#customers" class="nav-link">Customers</a>
           </li>
           <li class="nav-item">
-            <a href="#startHosting" class="nav-link">Start Hosting</a>
+            <a href="#start-hosting" class="nav-link">Start Hosting</a>
           </li>
         </ul>
       </div>
@@ -210,7 +210,62 @@
   </section>
 
 
-  <footer id="main-footer" class="text-center mt-4 p-4 bg-dark text-white">
+  <!-- CONTACT -->
+  <section id="start-hosting" class="py-4 mt-4 bg-primary text-white">
+    <div class="container">
+      <h1 class="text-center">Awesome! Lets dive right in!</h1>
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <select class="form-control" id="title">
+            <option>Mr.</option>
+            <option>Ms.</option>        
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="col-md-3 align-self-end">
+            <label for="firstname">First name</label>
+          </div>
+          <div class="col-md-9 align-self-start">
+            <input type="text" class="form-control">
+          </div> 
+        </div>
+        <div class="form-row mt-3">
+          <div class="col-md-3 align-self-end">
+            <label for="lastname">Last name</label>
+          </div>
+          <div class="col-md-9 align-self-start">
+            <input type="text" class="form-control">
+          </div> 
+        </div>
+        <div class="form-row mt-3">
+          <div class="col-md-3 align-self-end">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-md-9 align-self-start">
+            <input type="email" class="form-control">
+          </div> 
+        </div>
+        <div class="form-row mt-3">
+          <div class="col-md-3 align-self-end">
+            <label for="password">Password</label>
+          </div>
+          <div class="col-md-9 align-self-start">
+            <input type="password" class="form-control">
+          </div> 
+        </div>
+        <div class="form-check mt-3">
+          <input type="checkbox" class="form-check-input">
+          <label class="form-check-label mr-2">
+               Agree to <a class="text-danger" href="www.facebook.com">Terms and Conditions</a>
+          </label>
+        </div>
+        <button class="btn btn-dark mt-4 btn-md">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="main-footer" class="text-center  p-4 bg-dark text-white">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -241,6 +296,23 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    $('body').scrollspy({ target: "#main-nav" })
+
+
+    $('#main-nav a').on('click', function(event) {
+      if(this.hash !== ''){
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+          window.location.hash = hash;
+        })
+      }
+    })
   </script>
 </body>
 

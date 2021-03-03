@@ -35,3 +35,37 @@
 .customer-header{
     border-bottom: 1px solid whitesmoke;
 }
+
+#start-hosting .container{
+    width: 40vw;
+    font-size: 1.2rem;
+}
+
+.form-control{
+    font-size: 1.1rem;
+    padding: 3px;
+}
+
+
+@media(max-width : 1333px){
+
+#start-hosting .container{
+    width: 50vw;
+    font-size: 1.2rem;
+}
+}
+@media(max-width : 860px){
+
+    #start-hosting .container{
+        width: 60vw;
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width : 600px){
+
+    #start-hosting .container{
+        width: 80vw;
+        font-size: 1.2rem;
+    }
+}
